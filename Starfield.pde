@@ -25,7 +25,7 @@ class NormalParticle implements Particle
 		y = y1;
 		angle = Math.random()*Math.PI*2;
 		speed = Math.random()*10;
-		c = (int)(Math.random()*16777216);
+		c = color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
 	}
 	public void move(){
 		x += speed*Math.cos(angle);
@@ -33,6 +33,7 @@ class NormalParticle implements Particle
 	}
 	public void show(){
 		fill(c);
+
 		ellipse((float)x, (float)y, 5f,5f);
 	}
 }
@@ -70,4 +71,3 @@ class JumboParticle extends NormalParticle//uses inheritance
 		ellipse((float)x, (float)y, 50f,50f);
 	}
 }
-
