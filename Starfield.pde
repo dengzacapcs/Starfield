@@ -25,7 +25,7 @@ class NormalParticle implements Particle
 		y = y1;
 		angle = Math.random()*Math.PI*2;
 		speed = Math.random()*10;
-		c = 0;
+		c = (int)(Math.random()*16777216);
 	}
 	public void move(){
 		x += speed*Math.cos(angle);
